@@ -136,7 +136,12 @@ require('lazy').setup({
     -- Enable `lukas-reineke/indent-blankline.nvim`
     -- See `:help indent_blankline.txt`
     main = "ibl",
-    opts = {},
+    opts = {
+      scope = {
+        show_start = false,
+        show_end = false,
+      }
+    },
   },
 
   -- "gc" to comment visual regions/lines
@@ -323,7 +328,7 @@ vim.defer_fn(function()
     auto_install = false,
 
     highlight = { enable = true },
-    indent = { enable = true },
+    indent = { enable = false },
     incremental_selection = {
       enable = true,
       keymaps = {
