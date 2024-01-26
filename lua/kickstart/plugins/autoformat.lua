@@ -51,7 +51,7 @@ return {
           return
         end
 
-        if client.name == 'html' then
+        if client.name == 'html' or client.name == 'cssls' then
           return
         end
 

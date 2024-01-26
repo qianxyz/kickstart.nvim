@@ -567,6 +567,7 @@ local servers = {
   tsserver = {},
   ocamllsp = {},
   html = { filetypes = { 'html', 'twig', 'hbs' } },
+  cssls = {},
   lua_ls = {
     Lua = {
       workspace = { checkThirdParty = false },
