@@ -669,7 +669,7 @@ require('lazy').setup {
       --    you can use this plugin to help you. It even has snippets
       --    for various frameworks/libraries/etc. but you will have to
       --    set up the ones that are useful for you.
-      -- 'rafamadriz/friendly-snippets',
+      'rafamadriz/friendly-snippets',
     },
     config = function()
       local has_words_before = function()
@@ -681,6 +681,7 @@ require('lazy').setup {
       -- See `:help cmp`
       local cmp = require 'cmp'
       local luasnip = require 'luasnip'
+      require('luasnip.loaders.from_vscode').lazy_load()
       luasnip.config.setup {}
 
       cmp.setup {
