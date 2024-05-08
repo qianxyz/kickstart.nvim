@@ -254,6 +254,17 @@ require('lazy').setup({
   --  This is equivalent to:
   --    require('Comment').setup({})
 
+  { -- Copilot
+    'github/copilot.vim',
+    init = function() -- Change completion key to <C-J>
+      vim.keymap.set('i', '<C-J>', 'copilot#Accept("\\<CR>")', {
+        expr = true,
+        replace_keycodes = false,
+      })
+      vim.g.copilot_no_tab_map = true
+    end,
+  },
+
   -- "gc" to comment visual regions/lines
   { 'numToStr/Comment.nvim', opts = {} },
 
